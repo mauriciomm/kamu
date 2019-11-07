@@ -1,0 +1,9 @@
+{ 
+  "overrides": [{
+    "files": [ "*" ],
+    "rules": {
+      "no-undef": 0,
+      "jest/valid-expect": 0
+    }
+  }]
+}
