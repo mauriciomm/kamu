@@ -34,6 +34,7 @@ class LibrarySelector extends Component {
             <ListItem
               className="library"
               key={library.id}
+              name={library.name}
               onClick={() => this.props.history.push(`/libraries/${library.slug}`)}
               button
             >

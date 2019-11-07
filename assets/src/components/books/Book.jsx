@@ -45,12 +45,12 @@ export default class Book extends Component {
     if (!action) return null;
     switch (action.type) {
       case BORROW_BOOK_ACTION:
-        return <Button color={color} onClick={() => this.performAction(borrowBook, 'Borrow')}>Borrow</Button>;
+        return <Button className="borrow" color={color} onClick={() => this.performAction(borrowBook, 'Borrow')}>Borrow</Button>;
       case RETURN_BOOK_ACTION:
-        return <Button color={color} onClick={() => this.performAction(returnBook, 'Return')}>Return</Button>;
+        return <Button className="return" color={color} onClick={() => this.performAction(returnBook, 'Return')}>Return</Button>;
       case JOIN_WAITLIST_BOOK_ACTION:
         return isWaitlistFeatureActive()
-          && <Button color={color} onClick={() => this.performAction(joinWaitlist, 'JoinWaitlist')}>Join the waitlist</Button>;
+          && <Button className="waitlist" color={color} onClick={() => this.performAction(joinWaitlist, 'JoinWaitlist')}>Join the waitlist</Button>;
       default:
         return null;
     }
